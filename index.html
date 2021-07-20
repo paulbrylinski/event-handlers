@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10 Assignment</title>
+    <style>
+        nav ol{
+            list-style-type: lower-alpha;
+        }
+      input[type=text]{
+            width: 15%;
+        }
+    </style>
+    <script>
+            var count = 6;
+    while (count < = 12) {
+             count++;
+    }
+    </script>
+</head>
+<body>
+    <h1>Event Handlers at Work</h1>
+  
+    <h2>By <em>Paul Brylinski</em></h2>
+    <nav>
+        <ol>
+            <li><a href="https://www.google.com/" id="search">Search Here</a>
+                <script>
+                    document.getElementById("search").addEventListener("mouseover", mouseOver);
+                    document.getElementById("search").addEventListener("mouseout", mouseOut);
+                    function mouseOver(){
+                        document.body.style.backgroundColor = "green";
+                    }
+                    function mouseOut(){
+                        document.body.style.backgroundColor = "white";
+                    }
+                </script>
+                
+            </li>
+            <br>
+            <li><input type="button" id="btn1" value="Click Me"></input>
+                <script>
+                    document.getElementById("btn1").addEventListener("click", Click);
+                    function Click(){
+                        alert("You clicked the button!");
+                    }
+                </script>
+            </li>
+            <br>
+            <li>My name is
+                <label for="textbox"></label><input type="text" id="textbox" value="Sam">
+                <script>
+                    document.getElementById("textbox").addEventListener("change", Change);
+                    function Change(){
+                        alert("Name was changed to: " + textbox.value);
+                    }
+                </script>
+                Go ahead, change my name.
+            </li>
+            <li>
+                <input type="button" id="reload" value="Reload"></input>
+                <script>
+                    document.getElementById("reload").addEventListener("click", Reload);
+                    function Reload(){
+                        window.location.reload();
+                    }
+                </script>
+            </li>
+            <br>
+            <li><input type="button" id="favSite" value="My Favorite Site"></input>
+                <script>
+                    document.getElementById("favSite").addEventListener("click", Click);
+                    function Click(){
+                        window.open("https://www.dashichs.com/", "_blank");
+                    }
+                </script>
+            </li>
+        </ol>
+
+    </nav>
+</body>
+</html>
